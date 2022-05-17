@@ -29,6 +29,23 @@ public class Operation {
         return a + b;
     }
 
+    // qui il test fallisce con quickCheck perchè può andare in overflow
+    public int sumInt(int a, int b) {
+
+        long res = (long) a + b;
+
+        if (res > java.lang.Integer.MAX_VALUE) {
+            // overflow
+        }
+
+        operationsCounter++;
+        return a + b;
+    }
+
+    public float divisione(int a, int b) {
+        return (float) a / b;
+    }
+
     public int getCount() {
         return operationsCounter;
     }
